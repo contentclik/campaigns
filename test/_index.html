@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="ContentClik is where great content meets its audience. Discover curated research, eBooks, reports, and guides that grow your thinking." />
+    <title>ContentClik - Intelligence Worth Reading</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <!-- NAV (injected by CommonJS) -->
+    <div id="cc-nav"></div>
+
+    <!-- =====================================================
+       HERO
+  ====================================================== -->
+    <section class="hero">
+        <div class="container">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-10);align-items:center;">
+
+                <div>
+                    <div class="hero-eyebrow">
+                        <div class="hero-eyebrow-dot"></div>
+                        Publishing meets intelligence
+                    </div>
+                    <h1>The content you read <em>shapes</em> who you become.</h1>
+                    <p class="lead">ContentClik brings the best research, eBooks, and insights from top publishers
+                        straight to curious minds. Curated, not algorithmic. Real, not recycled.</p>
+                    <div class="hero-actions">
+                        <a href="/explore.html" class="btn btn--primary btn--lg">Start Exploring</a>
+                        <a href="/publishers.html" class="btn btn--ghost btn--lg">Publish With Us &rarr;</a>
+                    </div>
+
+                    <div class="hero-stat-row">
+                        <div class="hero-stat">
+                            <strong data-count="2400" data-suffix="+">0</strong>
+                            <span>Research pieces</span>
+                        </div>
+                        <div class="hero-stat">
+                            <strong data-count="500" data-suffix="+">0</strong>
+                            <span>Verified publishers</span>
+                        </div>
+                        <div class="hero-stat">
+                            <strong data-count="1800000" data-suffix="+">0</strong>
+                            <span>Monthly readers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="position:relative;">
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                        <img src="./stencils.png" alt="Featured eBook cover: Future of Work 2026 report"
+                            style="border-radius:var(--radius-md);aspect-ratio:3/4;object-fit:cover;width:100%;box-shadow:var(--shadow-lg);"
+                            data-reveal />
+                        <div style="display:flex;flex-direction:column;gap:12px;margin-top:40px;">
+                            <img src="./stencils.png" alt="White paper: AI in Enterprise cover"
+                                style="border-radius:var(--radius-md);aspect-ratio:3/4;object-fit:cover;width:100%;box-shadow:var(--shadow-md);"
+                                data-reveal />
+                            <img src="./stencils.png" alt="Guide: Marketing Playbook 2026 cover"
+                                style="border-radius:var(--radius-md);aspect-ratio:3/4;object-fit:cover;width:100%;box-shadow:var(--shadow-sm);"
+                                data-reveal />
+                        </div>
+                    </div>
+                    <div
+                        style="position:absolute;bottom:-20px;left:-20px;background:var(--amber);color:var(--ivory);border-radius:var(--radius-md);padding:12px 20px;box-shadow:var(--shadow-lg);z-index:2;">
+                        <div style="font-family:var(--font-mono);font-size:0.7rem;margin-bottom:2px;opacity:0.8;">
+                            TRENDING NOW</div>
+                        <div style="font-family:var(--font-display);font-weight:600;font-size:0.92rem;line-height:1.3;">
+                            Employee Digital Experience</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+       FEATURED CONTENT (Swiper)
+  ====================================================== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header flex-between" style="margin-bottom:var(--sp-6);">
+                <div>
+                    <div class="section-label">Fresh Picks</div>
+                    <h2>What is worth your time</h2>
+                </div>
+                <a href="/explore.html" class="btn btn--outline btn--sm">View All</a>
+            </div>
+
+            <div class="swiper swiper-featured swiper-section">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <a href="/detail.html" class="card card-featured">
+                            <img src="./stencils.png"
+                                alt="eBook cover: Digital Employee Experience and the remote work revolution"
+                                class="card-featured-img" />
+                            <div class="card-featured-body">
+                                <div class="card-meta">
+                                    <span class="badge badge--amber">eBook</span>
+                                    <span class="caption">8 min read</span>
+                                </div>
+                                <h4>Digital Employee Experience Takes Center Stage</h4>
+                                <p>Remote work changed everything. Here is what leading organizations are doing right
+                                    now to manage it.</p>
+                                <div style="margin-top:var(--sp-4);display:flex;align-items:center;gap:8px;">
+                                    <span class="caption">By ContentClik</span>
+                                    <span class="caption">&middot; Jun 2026</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="/detail.html" class="card card-featured">
+                            <img src="./stencils.png" alt="White paper cover: AI adoption across enterprise operations"
+                                class="card-featured-img" />
+                            <div class="card-featured-body">
+                                <div class="card-meta">
+                                    <span class="badge badge--olive">White Paper</span>
+                                    <span class="caption">12 min read</span>
+                                </div>
+                                <h4>AI Adoption Across Enterprise: The Real Numbers</h4>
+                                <p>Cut through the hype. Real data from 400 organizations on what AI is actually doing
+                                    for their bottom line.</p>
+                                <div style="margin-top:var(--sp-4);display:flex;align-items:center;gap:8px;">
+                                    <span class="caption">By ContentClik</span>
+                                    <span class="caption">&middot; Jun 2026</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="/detail.html" class="card card-featured">
+                            <img src="./stencils.png"
+                                alt="Report cover: Leadership in 2026 - what Gen-Z managers are doing differently"
+                                class="card-featured-img" />
+                            <div class="card-featured-body">
+                                <div class="card-meta">
+                                    <span class="badge badge--ink">Report</span>
+                                    <span class="caption">10 min read</span>
+                                </div>
+                                <h4>Leadership in 2026: What Gen-Z Managers Do Differently</h4>
+                                <p>A new generation of leaders is rewriting the playbook. Here is what they are
+                                    prioritizing.</p>
+                                <div style="margin-top:var(--sp-4);display:flex;align-items:center;gap:8px;">
+                                    <span class="caption">By ContentClik</span>
+                                    <span class="caption">&middot; May 2026</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="/detail.html" class="card card-featured">
+                            <img src="./stencils.png" alt="Guide cover: HR technology toolkit for modern teams"
+                                class="card-featured-img" />
+                            <div class="card-featured-body">
+                                <div class="card-meta">
+                                    <span class="badge badge--outline">Guide</span>
+                                    <span class="caption">7 min read</span>
+                                </div>
+                                <h4>The HR Technology Toolkit Every Modern Team Needs</h4>
+                                <p>Stop guessing which tools actually work. This guide compares the platforms worth your
+                                    budget.</p>
+                                <div style="margin-top:var(--sp-4);display:flex;align-items:center;gap:8px;">
+                                    <span class="caption">By ContentClik</span>
+                                    <span class="caption">&middot; May 2026</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+       TOPICS QUICK BROWSE
+  ====================================================== -->
+    <section class="section--sm"
+        style="background:var(--ivory-mid);border-top:1px solid var(--ivory-dark);border-bottom:1px solid var(--ivory-dark);">
+        <div class="container">
+            <div class="section-header--center section-header" style="margin-bottom:var(--sp-6);">
+                <div class="section-label">Browse by Topic</div>
+                <h2>Find what matters to you</h2>
+            </div>
+
+            <div class="swiper swiper-topics">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="width:auto;">
+                        <a href="/topics.html?t=hr"
+                            style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 24px;background:#fff;border-radius:var(--radius-md);border:1px solid var(--ivory-dark);transition:all 0.2s;text-decoration:none;">
+                            <div class="type-icon type-icon--guide" style="width:40px;height:40px;font-size:0.9rem;">HR
+                            </div>
+                            <span style="font-size:0.82rem;font-weight:600;color:var(--ink);">Human Resources</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" style="width:auto;">
+                        <a href="/topics.html?t=tech"
+                            style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 24px;background:#fff;border-radius:var(--radius-md);border:1px solid var(--ivory-dark);transition:all 0.2s;text-decoration:none;">
+                            <div class="type-icon type-icon--webinar" style="width:40px;height:40px;font-size:0.9rem;">
+                                TC</div>
+                            <span style="font-size:0.82rem;font-weight:600;color:var(--ink);">Technology</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" style="width:auto;">
+                        <a href="/topics.html?t=marketing"
+                            style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 24px;background:#fff;border-radius:var(--radius-md);border:1px solid var(--ivory-dark);transition:all 0.2s;text-decoration:none;">
+                            <div class="type-icon type-icon--amber"
+                                style="width:40px;height:40px;font-size:0.9rem;background:var(--amber-bg);color:var(--amber);">
+                                MK</div>
+                            <span style="font-size:0.82rem;font-weight:600;color:var(--ink);">Marketing</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" style="width:auto;">
+                        <a href="/topics.html?t=finance"
+                            style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 24px;background:#fff;border-radius:var(--radius-md);border:1px solid var(--ivory-dark);transition:all 0.2s;text-decoration:none;">
+                            <div class="type-icon type-icon--guide" style="width:40px;height:40px;font-size:0.9rem;">FN
+                            </div>
+                            <span style="font-size:0.82rem;font-weight:600;color:var(--ink);">Finance</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" style="width:auto;">
+                        <a href="/topics.html?t=leadership"
+                            style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 24px;background:#fff;border-radius:var(--radius-md);border:1px solid var(--ivory-dark);transition:all 0.2s;text-decoration:none;">
+                            <div class="type-icon type-icon--ebook" style="width:40px;height:40px;font-size:0.9rem;">LD
+                            </div>
+                            <span style="font-size:0.82rem;font-weight:600;color:var(--ink);">Leadership</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" style="width:auto;">
+                        <a href="/topics.html?t=ops"
+                            style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 24px;background:#fff;border-radius:var(--radius-md);border:1px solid var(--ivory-dark);transition:all 0.2s;text-decoration:none;">
+                            <div class="type-icon type-icon--report" style="width:40px;height:40px;font-size:0.9rem;">OP
+                            </div>
+                            <span style="font-size:0.82rem;font-weight:600;color:var(--ink);">Operations</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" style="width:auto;">
+                        <a href="/topics.html?t=lifescience"
+                            style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 24px;background:#fff;border-radius:var(--radius-md);border:1px solid var(--ivory-dark);transition:all 0.2s;text-decoration:none;">
+                            <div class="type-icon"
+                                style="width:40px;height:40px;font-size:0.9rem;background:#E8F5E9;color:#2E7D32;">LS
+                            </div>
+                            <span style="font-size:0.82rem;font-weight:600;color:var(--ink);">Life Sciences</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" style="width:auto;">
+                        <a href="/topics.html?t=lifestyle"
+                            style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 24px;background:#fff;border-radius:var(--radius-md);border:1px solid var(--ivory-dark);transition:all 0.2s;text-decoration:none;">
+                            <div class="type-icon type-icon--kit" style="width:40px;height:40px;font-size:0.9rem;">LF
+                            </div>
+                            <span style="font-size:0.82rem;font-weight:600;color:var(--ink);">Lifestyle</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+       NEWSLETTER / FORM SECTION (compulsory)
+  ====================================================== -->
+    <section class="section">
+        <div class="container">
+            <div class="form-section">
+                <div class="form-section-inner">
+                    <div class="section-label">Join the Network</div>
+                    <h2>Stay one step ahead.</h2>
+                    <p class="lead">Every Monday we send the most important research briefings, handpicked for
+                        professionals who take their knowledge seriously.</p>
+                    <form class="newsletter-form"
+                        style="display:flex;flex-direction:column;gap:var(--sp-4);margin-top:var(--sp-5);">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-input" placeholder="Alex" data-required />
+                                <span class="form-error" style="display:none;"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Work Email</label>
+                                <input type="email" class="form-input" placeholder="alex@company.com" data-required />
+                                <span class="form-error" style="display:none;"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">What topics interest you?</label>
+                            <select class="form-input form-select">
+                                <option value="">Select a topic</option>
+                                <option>Human Resources</option>
+                                <option>Technology</option>
+                                <option>Marketing</option>
+                                <option>Leadership</option>
+                                <option>Finance</option>
+                                <option>Operations</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn--amber btn--lg" style="width:100%;">Get Weekly
+                            Briefings</button>
+                        <p style="font-size:0.78rem;color:var(--ink-light);text-align:center;">No spam. No noise. Just
+                            the content that matters.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="cc-footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="modules/nav.js"></script>
+    <script src="modules/footer.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

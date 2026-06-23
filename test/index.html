@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="ContentClik is where great content meets its audience. Discover curated research, eBooks, reports, and guides that grow your thinking." />
+  <title>ContentClik - Intelligence Worth Reading</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    /* ========================================================
+       HOMEPAGE-SPECIFIC STYLES
+    ======================================================== */
+
+    /* --------------------------------------------------------
+       HERO
+    -------------------------------------------------------- */
+    .hero-hp {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: calc(var(--nav-height) + var(--sp-9));
+      padding-bottom: var(--sp-11);
+      background: var(--ivory);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-hp::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 48%;
+      height: 100%;
+      background: var(--ivory-mid);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-hp .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-hp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-10);
+      align-items: center;
+    }
+
+    /* Hero left */
+    .hero-eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--amber-bg);
+      border: 1px solid var(--amber-pale);
+      border-radius: var(--radius-pill);
+      padding: 6px 18px;
+      margin-bottom: var(--sp-5);
+    }
+
+    .hero-eyebrow-pill .pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--amber);
+      animation: heroPulse 2.2s ease-in-out infinite;
+    }
+
+    @keyframes heroPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.6);
+        opacity: 0.6;
+      }
+    }
+
+    .hero-eyebrow-pill span {
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--amber);
+      font-family: var(--font-body);
+    }
+
+    .hero-hp-h1 {
+      font-size: clamp(2.8rem, 5.2vw, 5rem);
+      font-family: var(--font-display);
+      line-height: 1.07;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      margin-bottom: var(--sp-5);
+    }
+
+    .hero-hp-h1 em {
+      font-style: italic;
+      color: var(--amber);
+    }
+
+    .hero-hp-lead {
+      font-size: 1.08rem;
+      line-height: 1.78;
+      color: var(--ink-soft);
+      max-width: 460px;
+      margin-bottom: var(--sp-7);
+    }
+
+    .hero-cta-row {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+      margin-bottom: var(--sp-9);
+      flex-wrap: wrap;
+    }
+
+    .hero-divider {
+      width: 1px;
+      height: 28px;
+      background: var(--ivory-dark);
+    }
+
+    .hero-stat-row {
+      display: flex;
+      gap: var(--sp-8);
+      padding-top: var(--sp-6);
+      border-top: 1px solid var(--ivory-dark);
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .hero-stat span {
+      font-size: 0.76rem;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Hero right mosaic */
+    .hero-mosaic {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 14px;
+      position: relative;
+      padding-bottom: 40px;
+    }
+
+    .mosaic-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+    }
+
+    .mosaic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .mosaic-card img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .mosaic-card-body {
+      padding: 14px 16px 16px;
+    }
+
+    .mosaic-card-body .badge {
+      margin-bottom: 7px;
+    }
+
+    .mosaic-card-body h5 {
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--ink);
+    }
+
+    .mosaic-card--tall {
+      grid-row: span 2;
+    }
+
+    .mosaic-card--tall img {
+      aspect-ratio: 9/14;
+    }
+
+    .mosaic-card--short img {
+      aspect-ratio: 3/2;
+    }
+
+    .mosaic-float {
+      position: absolute;
+      bottom: 10px;
+      right: -16px;
+      background: var(--ink);
+      color: var(--ivory);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      box-shadow: 0 20px 56px rgba(26, 24, 20, 0.22);
+      min-width: 190px;
+      z-index: 5;
+    }
+
+    .mosaic-float-label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(250, 248, 244, 0.45);
+      margin-bottom: 6px;
+    }
+
+    .mosaic-float-title {
+      font-family: var(--font-display);
+      font-size: 0.94rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--ivory);
+    }
+
+    .mosaic-float-sub {
+      font-size: 0.68rem;
+      color: rgba(250, 248, 244, 0.4);
+      margin-top: 5px;
+      font-family: var(--font-mono);
+    }
+
+    /* --------------------------------------------------------
+       TICKER STRIP
+    -------------------------------------------------------- */
+    .ticker-wrap {
+      background: var(--ink);
+      padding: 13px 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ticker-track {
+      display: flex;
+      gap: 48px;
+      width: max-content;
+      animation: tickerMove 50s linear infinite;
+      align-items: center;
+    }
+
+    .ticker-wrap:hover .ticker-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes tickerMove {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .ticker-hot {
+      flex-shrink: 0;
+      background: var(--amber);
+      color: var(--ink);
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 4px 11px;
+      border-radius: var(--radius-pill);
+    }
+
+    .ticker-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(250, 248, 244, 0.75);
+      font-size: 0.76rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s;
+      flex-shrink: 0;
+    }
+
+    .ticker-link:hover {
+      color: var(--amber-light);
+    }
+
+    .ticker-link::after {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(250, 248, 244, 0.2);
+    }
+
+    /* --------------------------------------------------------
+       TRENDING SECTION
+    -------------------------------------------------------- */
+    .trending-wrap {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: var(--sp-8);
+      align-items: start;
+    }
+
+    .trending-big {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .trending-big img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .trending-big:hover img {
+      transform: scale(1.04);
+    }
+
+    .trending-big-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(26, 24, 20, 0.93) 0%, rgba(26, 24, 20, 0.0) 100%);
+      padding: var(--sp-7) var(--sp-7) var(--sp-8);
+    }
+
+    .trending-big-overlay h3 {
+      color: var(--ivory);
+      font-size: 1.6rem;
+      line-height: 1.2;
+      margin-bottom: var(--sp-2);
+    }
+
+    .trending-big-overlay p {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: rgba(250, 248, 244, 0.72);
+      max-width: 480px;
+    }
+
+    .trending-big-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: var(--sp-3);
+    }
+
+    .trending-list-stack {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .trending-list-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: var(--sp-4);
+      font-family: var(--font-body);
+    }
+
+    .trending-row {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--sp-4);
+      padding: var(--sp-4) 0;
+      border-bottom: 1px solid var(--ivory-dark);
+      text-decoration: none;
+      transition: padding-left 0.2s ease;
+    }
+
+    .trending-row:hover {
+      padding-left: 6px;
+    }
+
+    .trending-row:last-child {
+      border-bottom: none;
+    }
+
+    .t-num {
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--ivory-dark);
+      line-height: 1;
+      min-width: 34px;
+      transition: color 0.2s;
+    }
+
+    .trending-row:hover .t-num {
+      color: var(--amber-pale);
+    }
+
+    .t-thumb {
+      width: 68px;
+      height: 54px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+    }
+
+    .t-body {}
+
+    .t-body h5 {
+      font-family: var(--font-display);
+      font-size: 0.94rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .t-meta {
+      font-size: 0.73rem;
+      color: var(--ink-muted);
+      font-family: var(--font-mono);
+    }
+
+    /* --------------------------------------------------------
+       TOPIC CHIPS
+    -------------------------------------------------------- */
+    .topics-band {
+      background: var(--ivory-mid);
+      border-top: 1px solid var(--ivory-dark);
+      border-bottom: 1px solid var(--ivory-dark);
+      padding: var(--sp-7) 0;
+    }
+
+    .topics-band-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--sp-5);
+    }
+
+    .topic-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 20px;
+      background: #fff;
+      border: 1px solid var(--ivory-dark);
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      transition: all 0.22s ease;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .topic-chip:hover {
+      background: var(--ink);
+      border-color: var(--ink);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .topic-chip:hover .tc-label,
+    .topic-chip:hover .tc-count {
+      color: rgba(250, 248, 244, 0.9);
+    }
+
+    .tc-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+      font-family: var(--font-body);
+    }
+
+    .tc-label {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--ink);
+      transition: color 0.22s;
+    }
+
+    .tc-count {
+      font-size: 0.7rem;
+      color: var(--ink-light);
+      font-family: var(--font-mono);
+      transition: color 0.22s;
+    }
+
+    /* --------------------------------------------------------
+       EDITORIAL DISPATCH (magazine section)
+    -------------------------------------------------------- */
+    .editorial-wrap {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: var(--sp-6);
+      align-items: start;
+    }
+
+    .ed-feature {}
+
+    .ed-feature img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      display: block;
+      margin-bottom: var(--sp-4);
+      transition: transform 0.35s ease;
+    }
+
+    .ed-feature:hover img {
+      transform: scale(1.015);
+    }
+
+    .ed-feature h3 {
+      font-size: 1.45rem;
+      line-height: 1.22;
+      color: var(--ink);
+      margin-bottom: var(--sp-2);
+    }
+
+    .ed-feature p {
+      font-size: 0.91rem;
+      line-height: 1.65;
+      color: var(--ink-soft);
+      margin-bottom: var(--sp-4);
+    }
+
+    .ed-side {}
+
+    .ed-side img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      display: block;
+      margin-bottom: var(--sp-3);
+      transition: transform 0.35s ease;
+    }
+
+    .ed-side:hover img {
+      transform: scale(1.015);
+    }
+
+    .ed-side h4 {
+      font-size: 1.05rem;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: var(--sp-2);
+    }
+
+    .ed-side p {
+      font-size: 0.86rem;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      margin-bottom: var(--sp-3);
+    }
+
+    /* --------------------------------------------------------
+       STATS BAND
+    -------------------------------------------------------- */
+    .stat-band-hp {
+      background: var(--ink);
+      padding: var(--sp-10) 0;
+    }
+
+    .stat-band-grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
+      gap: 0;
+      align-items: center;
+    }
+
+    .stat-band-item {
+      text-align: center;
+      padding: var(--sp-4) var(--sp-6);
+    }
+
+    .stat-band-item strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      font-weight: 700;
+      color: var(--ivory);
+      line-height: 1;
+      margin-bottom: var(--sp-2);
+    }
+
+    .stat-band-item span {
+      font-size: 0.79rem;
+      color: rgba(250, 248, 244, 0.45);
+      letter-spacing: 0.05em;
+    }
+
+    .stat-sep {
+      background: rgba(255, 255, 255, 0.07);
+      height: 56px;
+      width: 1px;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .stat-band-source {
+      text-align: center;
+      margin-top: var(--sp-7);
+      padding-top: var(--sp-7);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      color: rgba(250, 248, 244, 0.25);
+    }
+
+    /* --------------------------------------------------------
+       FEATURED SWIPER SECTION
+    -------------------------------------------------------- */
+    .swiper-featured-wrap {
+      position: relative;
+    }
+
+    /* --------------------------------------------------------
+       CONTENT FORMATS
+    -------------------------------------------------------- */
+    .formats-band {
+      background: var(--ivory-mid);
+      border-top: 1px solid var(--ivory-dark);
+      border-bottom: 1px solid var(--ivory-dark);
+      padding: var(--sp-8) 0;
+    }
+
+    .formats-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--sp-4);
+    }
+
+    .format-tile {
+      background: #fff;
+      border: 1px solid var(--ivory-dark);
+      border-radius: var(--radius-md);
+      padding: var(--sp-5) var(--sp-4);
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      transition: all 0.25s ease;
+    }
+
+    .format-tile:hover {
+      border-color: var(--amber);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .format-tile-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-sm);
+      margin: 0 auto var(--sp-3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-family: var(--font-body);
+    }
+
+    .format-tile h5 {
+      font-size: 0.87rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .format-tile-count {
+      font-size: 0.73rem;
+      color: var(--ink-light);
+      font-family: var(--font-mono);
+    }
+
+    /* --------------------------------------------------------
+       HOW IT WORKS
+    -------------------------------------------------------- */
+    .how-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: var(--sp-10);
+      align-items: start;
+    }
+
+    .how-sep {
+      background: var(--ivory-dark);
+      min-height: 380px;
+      width: 1px;
+      justify-self: center;
+      align-self: center;
+    }
+
+    .how-side h3 {
+      font-size: 1.5rem;
+      margin-bottom: var(--sp-2);
+    }
+
+    .how-side-subtitle {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      margin-bottom: var(--sp-7);
+    }
+
+    .how-step {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--sp-4);
+      margin-bottom: var(--sp-6);
+    }
+
+    .how-step-num {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .how-step-num--r {
+      background: var(--amber-bg);
+      color: var(--amber);
+    }
+
+    .how-step-num--p {
+      background: var(--ink);
+      color: var(--ivory);
+    }
+
+    .how-step-body h5 {
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 5px;
+    }
+
+    .how-step-body p {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: var(--ink-soft);
+    }
+
+    /* --------------------------------------------------------
+       TESTIMONIALS
+    -------------------------------------------------------- */
+    .testi-band {
+      background: var(--ivory-mid);
+      border-top: 1px solid var(--ivory-dark);
+      padding: var(--sp-10) 0;
+    }
+
+    .testi-pagination {
+      text-align: center;
+      margin-top: var(--sp-6);
+    }
+
+    /* --------------------------------------------------------
+       PUBLISHER CTA STRIP
+    -------------------------------------------------------- */
+    .pub-strip {
+      background: var(--ink);
+      border-radius: var(--radius-xl);
+      padding: var(--sp-10) var(--sp-10);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: var(--sp-8);
+      align-items: center;
+    }
+
+    .pub-strip h2 {
+      color: var(--ivory);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      margin-bottom: var(--sp-3);
+    }
+
+    .pub-strip h2 em {
+      font-style: italic;
+      color: var(--amber-light);
+    }
+
+    .pub-strip p {
+      color: rgba(250, 248, 244, 0.6);
+      max-width: 500px;
+      font-size: 0.96rem;
+      line-height: 1.7;
+    }
+
+    .pub-strip-cta {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-3);
+      min-width: 210px;
+      align-items: stretch;
+    }
+
+    .btn-ghost-light {
+      background: transparent;
+      color: rgba(250, 248, 244, 0.6);
+      border: 1px solid rgba(250, 248, 244, 0.14);
+      padding: 12px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.22s ease;
+      font-family: var(--font-body);
+      cursor: pointer;
+    }
+
+    .btn-ghost-light:hover {
+      border-color: rgba(250, 248, 244, 0.3);
+      color: var(--ivory);
+    }
+
+    /* --------------------------------------------------------
+       NEWSLETTER FORM SECTION
+    -------------------------------------------------------- */
+    .nl-section {
+      background: var(--amber-bg);
+      border-top: 1px solid var(--amber-pale);
+      padding: var(--sp-11) 0;
+    }
+
+    .nl-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-10);
+      align-items: center;
+    }
+
+    .nl-left h2 {
+      margin-bottom: var(--sp-3);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+    }
+
+    .nl-left p {
+      font-size: 1.04rem;
+      line-height: 1.75;
+      color: var(--ink-soft);
+      margin-bottom: var(--sp-6);
+    }
+
+    .nl-trust-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-3);
+    }
+
+    .nl-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+    }
+
+    .nl-trust-item::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--amber);
+      flex-shrink: 0;
+    }
+
+    /* --------------------------------------------------------
+       RESPONSIVE
+    -------------------------------------------------------- */
+    @media (max-width: 1100px) {
+      .stat-band-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat-sep {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-hp-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-hp::after {
+        display: none;
+      }
+
+      .hero-mosaic {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .mosaic-card--tall {
+        grid-row: span 1;
+      }
+
+      .mosaic-card--tall img {
+        aspect-ratio: 4/3;
+      }
+
+      .trending-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .editorial-wrap {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .ed-feature {
+        grid-column: span 2;
+      }
+
+      .formats-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .how-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .how-sep {
+        display: none;
+      }
+
+      .pub-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .pub-strip-cta {
+        flex-direction: row;
+        min-width: unset;
+      }
+
+      .nl-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-hp {
+        min-height: auto;
+        padding-top: calc(var(--nav-height) + var(--sp-7));
+      }
+
+      .hero-mosaic {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .mosaic-float {
+        right: 0;
+      }
+
+      .editorial-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .ed-feature {
+        grid-column: span 1;
+      }
+
+      .formats-row {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .pub-strip {
+        padding: var(--sp-7) var(--sp-6);
+        border-radius: var(--radius-lg);
+      }
+
+      .pub-strip-cta {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-hp-h1 {
+        font-size: 2.3rem;
+      }
+
+      .hero-mosaic {
+        grid-template-columns: 1fr;
+      }
+
+      .formats-row {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat-band-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .ticker-track,
+      .heroPulse {
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV (injected by CommonJS) -->
+  <div id="cc-nav"></div>
+
+  <!-- ========================================================
+       SECTION 1 - HERO
+  ======================================================== -->
+  <section class="hero-hp">
+    <div class="container">
+      <div class="hero-hp-grid">
+
+        <!-- Left: Copy -->
+        <div data-reveal>
+
+          <div class="hero-eyebrow-pill">
+            <div class="pulse"></div>
+            <span>Publishing meets intelligence</span>
+          </div>
+
+          <h1 class="hero-hp-h1">
+            The content<br>
+            you read <em>shapes</em><br>
+            who you become.
+          </h1>
+
+          <p class="hero-hp-lead">ContentClik brings the sharpest research, eBooks, and expert insights from verified
+            publishers to curious minds. Curated, not algorithmic. Real, not recycled.</p>
+
+          <div class="hero-cta-row">
+            <a href="/explore.html" class="btn btn--primary btn--lg">Start Exploring</a>
+            <div class="hero-divider"></div>
+            <a href="/publishers.html" class="btn btn--ghost btn--lg">Publish With Us &rarr;</a>
+          </div>
+
+          <div class="hero-stat-row">
+            <div class="hero-stat">
+              <strong data-count="2400" data-suffix="+">0</strong>
+              <span>Research Pieces</span>
+            </div>
+            <div class="hero-stat">
+              <strong data-count="500" data-suffix="+">0</strong>
+              <span>Verified Publishers</span>
+            </div>
+            <div class="hero-stat">
+              <strong data-count="180" data-suffix="K+">0</strong>
+              <span>Weekly Readers</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Mosaic -->
+        <div class="hero-mosaic">
+
+          <a href="/detail.html" class="mosaic-card mosaic-card--tall" data-reveal>
+            <img src="./stencils.png"
+              alt="Featured eBook cover: Future of Work 2026, a guide to leading remote-first and hybrid organizations in a changing world"
+              style="aspect-ratio:9/14;" />
+            <div class="mosaic-card-body">
+              <span class="badge badge--amber">eBook</span>
+              <h5>Future of Work 2026</h5>
+            </div>
+          </a>
+
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="/detail.html" class="mosaic-card mosaic-card--short" data-reveal>
+              <img src="./stencils.png"
+                alt="White paper cover: AI Adoption in Enterprise Operations, benchmarks from 400 global companies"
+                style="aspect-ratio:3/2;" />
+              <div class="mosaic-card-body">
+                <span class="badge badge--olive">White Paper</span>
+                <h5>AI in Enterprise Operations</h5>
+              </div>
+            </a>
+            <a href="/detail.html" class="mosaic-card mosaic-card--short" data-reveal>
+              <img src="./stencils.png"
+                alt="Report cover: Gen-Z Leadership Playbook 2026, what new managers are doing differently"
+                style="aspect-ratio:3/2;" />
+              <div class="mosaic-card-body">
+                <span class="badge badge--ink">Report</span>
+                <h5>Gen-Z Leadership Playbook</h5>
+              </div>
+            </a>
+          </div>
+
+          <div class="mosaic-float">
+            <div class="mosaic-float-label">Trending Now</div>
+            <div class="mosaic-float-title">Digital Employee Experience Takes Center Stage</div>
+            <div class="mosaic-float-sub">3,241 reads this week</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       TICKER STRIP
+  ======================================================== -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track">
+      <!-- Set 1 -->
+      <span class="ticker-hot">Trending</span>
+      <a href="/topics.html?t=hr" class="ticker-link">Human Resources</a>
+      <a href="/topics.html?t=tech" class="ticker-link">AI in Enterprise</a>
+      <a href="/topics.html?t=leadership" class="ticker-link">Gen-Z Leadership</a>
+      <a href="/topics.html?t=marketing" class="ticker-link">Demand Generation</a>
+      <a href="/topics.html?t=ops" class="ticker-link">Remote Work Future</a>
+      <a href="/topics.html?t=finance" class="ticker-link">Finance Strategy</a>
+      <a href="/topics.html?t=lifestyle" class="ticker-link">Workplace Wellbeing</a>
+      <a href="/topics.html?t=lifescience" class="ticker-link">Life Sciences</a>
+      <a href="/topics.html?t=marketing" class="ticker-link">Content Marketing ROI</a>
+      <a href="/topics.html?t=tech" class="ticker-link">Digital Transformation</a>
+      <a href="/topics.html?t=hr" class="ticker-link">Talent Acquisition</a>
+      <a href="/topics.html?t=ops" class="ticker-link">Operational Excellence</a>
+      <!-- Set 2 (duplicate for seamless loop) -->
+      <span class="ticker-hot">Trending</span>
+      <a href="/topics.html?t=hr" class="ticker-link">Human Resources</a>
+      <a href="/topics.html?t=tech" class="ticker-link">AI in Enterprise</a>
+      <a href="/topics.html?t=leadership" class="ticker-link">Gen-Z Leadership</a>
+      <a href="/topics.html?t=marketing" class="ticker-link">Demand Generation</a>
+      <a href="/topics.html?t=ops" class="ticker-link">Remote Work Future</a>
+      <a href="/topics.html?t=finance" class="ticker-link">Finance Strategy</a>
+      <a href="/topics.html?t=lifestyle" class="ticker-link">Workplace Wellbeing</a>
+      <a href="/topics.html?t=lifescience" class="ticker-link">Life Sciences</a>
+      <a href="/topics.html?t=marketing" class="ticker-link">Content Marketing ROI</a>
+      <a href="/topics.html?t=tech" class="ticker-link">Digital Transformation</a>
+      <a href="/topics.html?t=hr" class="ticker-link">Talent Acquisition</a>
+      <a href="/topics.html?t=ops" class="ticker-link">Operational Excellence</a>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 2 - TRENDING: FEATURED PIECE + NUMBERED LIST
+  ======================================================== -->
+  <section class="section">
+    <div class="container">
+
+      <div class="flex-between" style="margin-bottom:var(--sp-7);">
+        <div>
+          <div class="section-label">Right Now</div>
+          <h2>What people are reading</h2>
+        </div>
+        <a href="/explore.html" class="btn btn--outline btn--sm">View All</a>
+      </div>
+
+      <div class="trending-wrap">
+
+        <!-- Big feature card -->
+        <a href="/detail.html" class="trending-big" data-reveal>
+          <img src="./stencils.png"
+            alt="Featured briefing: Digital Employee Experience Takes Center Stage, covering remote workforce management, digital enablement tools, and the IT gap in 2026" />
+          <div class="trending-big-overlay">
+            <div class="trending-big-meta">
+              <span class="badge badge--amber">eBook</span>
+              <span style="font-size:0.76rem;color:rgba(250,248,244,0.55);font-family:var(--font-mono);">12 min
+                read</span>
+            </div>
+            <h3>Digital Employee Experience Takes Center Stage</h3>
+            <p>Remote work changed everything. Here is what leading organizations are doing right now to manage it well
+              and close the IT enablement gap.</p>
+          </div>
+        </a>
+
+        <!-- Numbered list -->
+        <div class="trending-list-stack">
+          <div class="trending-list-label">Also Trending</div>
+
+          <a href="/detail.html" class="trending-row" data-reveal>
+            <span class="t-num">01</span>
+            <img src="./stencils.png"
+              alt="Thumbnail: Essential Capabilities for Workforce Compliance in Trucking, covering onboarding and regulations"
+              class="t-thumb" />
+            <div class="t-body">
+              <h5>Essential Capabilities for Workforce Compliance in Trucking</h5>
+              <span class="t-meta">White Paper &middot; 10 min</span>
+            </div>
+          </a>
+
+          <a href="/detail.html" class="trending-row" data-reveal>
+            <span class="t-num">02</span>
+            <img src="./stencils.png"
+              alt="Thumbnail: Helping young talent develop professional mindset skills for long-term career success"
+              class="t-thumb" />
+            <div class="t-body">
+              <h5>Help Young Talent Develop a Professional Mindset</h5>
+              <span class="t-meta">Guide &middot; 8 min</span>
+            </div>
+          </a>
+
+          <a href="/detail.html" class="trending-row" data-reveal>
+            <span class="t-num">03</span>
+            <img src="./stencils.png"
+              alt="Thumbnail: The HR to Profitability Connection, covering how HR strategy drives financial performance"
+              class="t-thumb" />
+            <div class="t-body">
+              <h5>The HR to Profitability Connection</h5>
+              <span class="t-meta">eBook &middot; 10 min</span>
+            </div>
+          </a>
+
+          <a href="/detail.html" class="trending-row" data-reveal>
+            <span class="t-num">04</span>
+            <img src="./stencils.png"
+              alt="Thumbnail: AI Adoption Across Enterprise, real data from 400 organizations on cost savings and outcomes"
+              class="t-thumb" />
+            <div class="t-body">
+              <h5>AI Adoption Across Enterprise: The Real Numbers</h5>
+              <span class="t-meta">Report &middot; 12 min</span>
+            </div>
+          </a>
+
+          <a href="/detail.html" class="trending-row" data-reveal>
+            <span class="t-num">05</span>
+            <img src="./stencils.png"
+              alt="Thumbnail: Technology Time-Savers for the Busy Worker, a productivity guide for modern professionals"
+              class="t-thumb" />
+            <div class="t-body">
+              <h5>Technology Time-Savers for the Busy Worker</h5>
+              <span class="t-meta">Guide &middot; 6 min</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       TOPIC CHIPS SWIPER
+  ======================================================== -->
+  <div class="topics-band">
+    <div class="container">
+      <div class="topics-band-header">
+        <div class="section-label">Browse by Topic</div>
+        <a href="/topics.html" class="btn btn--ghost btn--sm">All Topics &rarr;</a>
+      </div>
+
+      <div class="swiper swiper-topics" style="overflow:hidden;">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide" style="width:auto;">
+            <a href="/topics.html?t=hr" class="topic-chip">
+              <div class="tc-icon" style="background:#F0F4FF;color:#3B5BDB;">HR</div>
+              <span class="tc-label">Human Resources</span>
+              <span class="tc-count">415+</span>
+            </a>
+          </div>
+
+          <div class="swiper-slide" style="width:auto;">
+            <a href="/topics.html?t=tech" class="topic-chip">
+              <div class="tc-icon" style="background:var(--amber-bg);color:var(--amber);">TC</div>
+              <span class="tc-label">Technology</span>
+              <span class="tc-count">382+</span>
+            </a>
+          </div>
+
+          <div class="swiper-slide" style="width:auto;">
+            <a href="/topics.html?t=marketing" class="topic-chip">
+              <div class="tc-icon" style="background:#FFF0F5;color:#C2255C;">MK</div>
+              <span class="tc-label">Marketing</span>
+              <span class="tc-count">294+</span>
+            </a>
+          </div>
+
+          <div class="swiper-slide" style="width:auto;">
+            <a href="/topics.html?t=leadership" class="topic-chip">
+              <div class="tc-icon" style="background:#F0FFF4;color:#2F9E44;">LD</div>
+              <span class="tc-label">Leadership</span>
+              <span class="tc-count">211+</span>
+            </a>
+          </div>
+
+          <div class="swiper-slide" style="width:auto;">
+            <a href="/topics.html?t=finance" class="topic-chip">
+              <div class="tc-icon" style="background:#EFF0FF;color:#4263EB;">FN</div>
+              <span class="tc-label">Finance</span>
+              <span class="tc-count">178+</span>
+            </a>
+          </div>
+
+          <div class="swiper-slide" style="width:auto;">
+            <a href="/topics.html?t=ops" class="topic-chip">
+              <div class="tc-icon" style="background:var(--olive-pale);color:var(--olive);">OP</div>
+              <span class="tc-label">Operations</span>
+              <span class="tc-count">163+</span>
+            </a>
+          </div>
+
+          <div class="swiper-slide" style="width:auto;">
+            <a href="/topics.html?t=lifescience" class="topic-chip">
+              <div class="tc-icon" style="background:#E8F5E9;color:#2E7D32;">LS</div>
+              <span class="tc-label">Life Sciences</span>
+              <span class="tc-count">142+</span>
+            </a>
+          </div>
+
+          <div class="swiper-slide" style="width:auto;">
+            <a href="/topics.html?t=lifestyle" class="topic-chip">
+              <div class="tc-icon" style="background:#FFF9DB;color:#E67700;">LF</div>
+              <span class="tc-label">Lifestyle</span>
+              <span class="tc-count">128+</span>
+            </a>
+          </div>
+
+          <div class="swiper-slide" style="width:auto;">
+            <a href="/topics.html?t=retail" class="topic-chip">
+              <div class="tc-icon" style="background:#FCE4EC;color:#AD1457;">RT</div>
+              <span class="tc-label">Retail</span>
+              <span class="tc-count">97+</span>
+            </a>
+          </div>
+
+          <div class="swiper-slide" style="width:auto;">
+            <a href="/topics.html?t=media" class="topic-chip">
+              <div class="tc-icon" style="background:#E3F2FD;color:#1565C0;">MD</div>
+              <span class="tc-label">Media</span>
+              <span class="tc-count">84+</span>
+            </a>
+          </div>
+
+          <div class="swiper-slide" style="width:auto;">
+            <a href="/topics.html?t=manufacturing" class="topic-chip">
+              <div class="tc-icon" style="background:#FFF3E0;color:#E65100;">MF</div>
+              <span class="tc-label">Manufacturing</span>
+              <span class="tc-count">76+</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 3 - EDITOR'S DISPATCH (magazine grid)
+  ======================================================== -->
+  <section class="section" style="border-bottom:1px solid var(--ivory-dark);">
+    <div class="container">
+
+      <div class="flex-between" style="margin-bottom:var(--sp-7);">
+        <div>
+          <div class="section-label">Editor's Dispatch</div>
+          <h2>Handpicked. Verified. Essential.</h2>
+        </div>
+        <a href="/collections.html" class="btn btn--outline btn--sm">See Collections</a>
+      </div>
+
+      <div class="editorial-wrap">
+
+        <!-- Main feature -->
+        <a href="/detail.html" class="ed-feature" data-reveal
+          style="text-decoration:none;display:block;overflow:hidden;border-radius:var(--radius-md);">
+          <img src="./stencils.png"
+            alt="Editor's pick: Shaping Workplace Culture, a comprehensive guide on where high-performing organizations actually begin building lasting culture" />
+          <div class="card-meta" style="margin-bottom:var(--sp-2);margin-top:var(--sp-4);">
+            <span class="badge badge--amber">eBook</span>
+            <span class="caption">10 min read</span>
+          </div>
+          <h3>Shaping Workplace Culture: Where Leaders Actually Start</h3>
+          <p>Culture goals are often vague. This guide gives you the actual starting points used by organizations that
+            have built something real, lasting, and measurable. Not theory. Proven first moves.</p>
+          <span class="btn btn--ghost" style="padding-left:0;font-size:0.85rem;margin-top:var(--sp-2);">Read Briefing
+            &rarr;</span>
+        </a>
+
+        <!-- Side 1 -->
+        <a href="/detail.html" class="ed-side" data-reveal style="text-decoration:none;display:block;">
+          <img src="./stencils.png"
+            alt="Editor's side pick: Employer's Guide to Mental Health, covering distributed teams, burnout prevention, and evidence-based workplace support strategies" />
+          <div class="card-meta" style="margin-bottom:var(--sp-2);">
+            <span class="badge badge--olive">Guide</span>
+            <span class="caption">9 min read</span>
+          </div>
+          <h4>Employer's Guide to Mental Health</h4>
+          <p>Economic uncertainty, remote isolation, and pressure overload. Here is how the best employers are
+            responding in ways that actually work.</p>
+          <span class="btn btn--ghost" style="padding-left:0;font-size:0.82rem;margin-top:var(--sp-2);">Read
+            &rarr;</span>
+        </a>
+
+        <!-- Side 2 -->
+        <a href="/detail.html" class="ed-side" data-reveal style="text-decoration:none;display:block;">
+          <img src="./stencils.png"
+            alt="Editor's side pick: The Flexible Workplace report covering hybrid schedules, remote-first policies, and regulatory considerations across sectors in 2026" />
+          <div class="card-meta" style="margin-bottom:var(--sp-2);">
+            <span class="badge badge--ink">Report</span>
+            <span class="caption">7 min read</span>
+          </div>
+          <h4>The Flexible Workplace</h4>
+          <p>Market tables, updated regulations, and real policies from 200 companies navigating hybrid work in 2026
+            without losing momentum.</p>
+          <span class="btn btn--ghost" style="padding-left:0;font-size:0.82rem;margin-top:var(--sp-2);">Read
+            &rarr;</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       STATS BAND (dark)
+  ======================================================== -->
+  <section class="stat-band-hp" data-reveal>
+    <div class="container">
+      <div class="stat-band-grid">
+
+        <div class="stat-band-item">
+          <strong data-count="2400" data-suffix="+">0</strong>
+          <span>Research Pieces</span>
+        </div>
+
+        <div class="stat-sep"></div>
+
+        <div class="stat-band-item">
+          <strong data-count="500" data-suffix="+">0</strong>
+          <span>Verified Publishers</span>
+        </div>
+
+        <div class="stat-sep"></div>
+
+        <div class="stat-band-item">
+          <strong data-count="62" data-suffix="%">0</strong>
+          <span>Cheaper Leads vs Traditional</span>
+        </div>
+
+        <div class="stat-sep"></div>
+
+        <div class="stat-band-item">
+          <strong data-count="6" data-suffix="x">0</strong>
+          <span>Higher Conversion Rate</span>
+        </div>
+
+      </div>
+      <div class="stat-band-source">Source: Content Marketing Institute, Headley Media, ContentClik Internal Data 2026
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FEATURED SWIPER
+  ======================================================== -->
+  <section class="section">
+    <div class="container">
+
+      <div class="flex-between" style="margin-bottom:var(--sp-6);">
+        <div>
+          <div class="section-label">Fresh Picks</div>
+          <h2>Worth your time this week</h2>
+        </div>
+        <a href="/explore.html" class="btn btn--outline btn--sm">View Library</a>
+      </div>
+
+      <div class="swiper swiper-featured swiper-section">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <a href="/detail.html" class="card card-featured">
+              <img src="./stencils.png"
+                alt="eBook cover: Communicating Strategically to Get What You Want, a guide to precision communication in professional settings"
+                class="card-featured-img" />
+              <div class="card-featured-body">
+                <div class="card-meta">
+                  <span class="badge badge--amber">eBook</span>
+                  <span class="caption">7 min read</span>
+                </div>
+                <h4>Communicating Strategically to Get What You Want</h4>
+                <p>The best communicators separate from the pack by wielding words with precision. Here is the full
+                  playbook.</p>
+                <div style="margin-top:var(--sp-4);display:flex;align-items:center;gap:8px;">
+                  <span class="caption">ContentClik &middot; Jun 2026</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="/detail.html" class="card card-featured">
+              <img src="./stencils.png"
+                alt="White paper cover: TalentOps Part 3, optimizing the recruiting process from initial sourcing through to final hiring decision"
+                class="card-featured-img" />
+              <div class="card-featured-body">
+                <div class="card-meta">
+                  <span class="badge badge--olive">White Paper</span>
+                  <span class="caption">11 min read</span>
+                </div>
+                <h4>TalentOps: Optimize the Recruiting Process</h4>
+                <p>A strong recruiting model gives teams the critical data needed to improve sourcing, interviewing, and
+                  final hiring decisions.</p>
+                <div style="margin-top:var(--sp-4);display:flex;align-items:center;gap:8px;">
+                  <span class="caption">ContentClik &middot; Jun 2026</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="/detail.html" class="card card-featured">
+              <img src="./stencils.png"
+                alt="Guide cover: Employee Wellbeing Platforms comparison for modern HR teams choosing the right partner in 2026"
+                class="card-featured-img" />
+              <div class="card-featured-body">
+                <div class="card-meta">
+                  <span class="badge badge--outline">Guide</span>
+                  <span class="caption">9 min read</span>
+                </div>
+                <h4>Employee Wellbeing Platforms: Finding the Right Partner</h4>
+                <p>From ROI to implementation timeline, this guide compares what works so you invest where it actually
+                  counts.</p>
+                <div style="margin-top:var(--sp-4);display:flex;align-items:center;gap:8px;">
+                  <span class="caption">ContentClik &middot; May 2026</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="/detail.html" class="card card-featured">
+              <img src="./stencils.png"
+                alt="Report cover: Innovative Hiring for Growing Businesses, with talent strategies from high-growth companies like Airbnb and Microsoft"
+                class="card-featured-img" />
+              <div class="card-featured-body">
+                <div class="card-meta">
+                  <span class="badge badge--ink">Report</span>
+                  <span class="caption">8 min read</span>
+                </div>
+                <h4>Innovative Hiring for Growing Businesses</h4>
+                <p>Discover how brands like Airbnb and Microsoft catapult growth by rethinking how they find and keep
+                  top talent.</p>
+                <div style="margin-top:var(--sp-4);display:flex;align-items:center;gap:8px;">
+                  <span class="caption">ContentClik &middot; May 2026</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="/detail.html" class="card card-featured">
+              <img src="./stencils.png"
+                alt="Kit cover: 99 Productive Moments in One Mobile App, a productivity toolkit guide for busy professionals always on the move"
+                class="card-featured-img" />
+              <div class="card-featured-body">
+                <div class="card-meta">
+                  <span class="badge" style="background:var(--olive-pale);color:var(--olive);">Kit</span>
+                  <span class="caption">6 min read</span>
+                </div>
+                <h4>99 Productive Moments in One Mobile App</h4>
+                <p>All the work you need done, coming to you when and where you need it. Built for professionals always
+                  on the move.</p>
+                <div style="margin-top:var(--sp-4);display:flex;align-items:center;gap:8px;">
+                  <span class="caption">ContentClik &middot; Jun 2026</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="/detail.html" class="card card-featured">
+              <img src="./stencils.png"
+                alt="eBook cover: How to Use Real-Time Engagement to Build a Winning Culture, especially useful for distributed and remote-first teams"
+                class="card-featured-img" />
+              <div class="card-featured-body">
+                <div class="card-meta">
+                  <span class="badge badge--amber">eBook</span>
+                  <span class="caption">9 min read</span>
+                </div>
+                <h4>Real-Time Engagement for a Winning Culture</h4>
+                <p>Monitor, assess, and improve engagement across your organization. In a few metrics, a few hours less
+                  wondering.</p>
+                <div style="margin-top:var(--sp-4);display:flex;align-items:center;gap:8px;">
+                  <span class="caption">ContentClik &middot; Jun 2026</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       CONTENT FORMATS ROW
+  ======================================================== -->
+  <div class="formats-band">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--sp-7);">
+        <div class="section-label">One Platform</div>
+        <h2>Every format you need</h2>
+      </div>
+
+      <div class="formats-row">
+
+        <a href="/explore.html?type=ebook" class="format-tile" data-reveal>
+          <div class="format-tile-icon" style="background:var(--amber-bg);color:var(--amber);">eBk</div>
+          <h5>eBooks</h5>
+          <div class="format-tile-count">620+ titles</div>
+        </a>
+
+        <a href="/explore.html?type=whitepaper" class="format-tile" data-reveal>
+          <div class="format-tile-icon" style="background:var(--olive-pale);color:var(--olive);">WP</div>
+          <h5>White Papers</h5>
+          <div class="format-tile-count">410+ reports</div>
+        </a>
+
+        <a href="/explore.html?type=report" class="format-tile" data-reveal>
+          <div class="format-tile-icon" style="background:#EEF2FF;color:#4338CA;">Rpt</div>
+          <h5>Reports</h5>
+          <div class="format-tile-count">380+ analyses</div>
+        </a>
+
+        <a href="/explore.html?type=guide" class="format-tile" data-reveal>
+          <div class="format-tile-icon" style="background:#F0FFF4;color:#22C55E;">Gde</div>
+          <h5>Guides</h5>
+          <div class="format-tile-count">290+ guides</div>
+        </a>
+
+        <a href="/explore.html?type=webinar" class="format-tile" data-reveal>
+          <div class="format-tile-icon" style="background:#FFF0F5;color:#EC4899;">Wbn</div>
+          <h5>Webinars</h5>
+          <div class="format-tile-count">180+ sessions</div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 4 - HOW IT WORKS
+  ======================================================== -->
+  <section class="section">
+    <div class="container">
+
+      <div style="text-align:center;margin-bottom:var(--sp-9);">
+        <div class="section-label">Simple by Design</div>
+        <h2>Built for readers. Built for publishers.</h2>
+      </div>
+
+      <div class="how-wrap">
+
+        <!-- Readers -->
+        <div class="how-side">
+          <h3>For Readers</h3>
+          <p class="how-side-subtitle">Discover content that actually increases your intelligence.</p>
+
+          <div class="how-step" data-reveal>
+            <div class="how-step-num how-step-num--r">1</div>
+            <div class="how-step-body">
+              <h5>Browse or Search</h5>
+              <p>Explore by topic, content type, or let our curated feeds surface what is relevant to you right now. No
+                algorithm. Real editorial judgment.</p>
+            </div>
+          </div>
+
+          <div class="how-step" data-reveal>
+            <div class="how-step-num how-step-num--r">2</div>
+            <div class="how-step-body">
+              <h5>Access in One Click</h5>
+              <p>Enter your email and get instant access. No paywalls. No friction. Just the research you came for,
+                ready to read or download.</p>
+            </div>
+          </div>
+
+          <div class="how-step" data-reveal>
+            <div class="how-step-num how-step-num--r">3</div>
+            <div class="how-step-body">
+              <h5>Save and Return</h5>
+              <p>Bookmark pieces to your personal library. Your reading history stays with you. Build a smarter
+                collection over time.</p>
+            </div>
+          </div>
+
+          <a href="/explore.html" class="btn btn--primary" style="margin-top:var(--sp-4);">Start Reading Free</a>
+        </div>
+
+        <div class="how-sep"></div>
+
+        <!-- Publishers -->
+        <div class="how-side">
+          <h3>For Publishers</h3>
+          <p class="how-side-subtitle">Turn your content into a demand generation engine.</p>
+
+          <div class="how-step" data-reveal>
+            <div class="how-step-num how-step-num--p">1</div>
+            <div class="how-step-body">
+              <h5>Submit Your Content</h5>
+              <p>Upload eBooks, white papers, reports, or webinars. Our editorial team reviews and approves within 48
+                hours. No content mills, no shortcuts.</p>
+            </div>
+          </div>
+
+          <div class="how-step" data-reveal>
+            <div class="how-step-num how-step-num--p">2</div>
+            <div class="how-step-body">
+              <h5>We Distribute It</h5>
+              <p>Your content reaches 180,000 weekly readers across newsletters, topic feeds, and curated collections.
+                Straight to the right audience.</p>
+            </div>
+          </div>
+
+          <div class="how-step" data-reveal>
+            <div class="how-step-num how-step-num--p">3</div>
+            <div class="how-step-body">
+              <h5>Collect Qualified Leads</h5>
+              <p>Every reader who accesses your content gives you direct contact data. Qualified, interested, and ready
+                to engage. 62% cheaper than paid ads.</p>
+            </div>
+          </div>
+
+          <a href="/publishers.html" class="btn btn--outline" style="margin-top:var(--sp-4);">Explore Publisher
+            Plans</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       TESTIMONIALS SWIPER
+  ======================================================== -->
+  <div class="testi-band">
+    <div class="container">
+
+      <div style="text-align:center;margin-bottom:var(--sp-7);">
+        <div class="section-label">Trusted By</div>
+        <h2>What people are saying</h2>
+      </div>
+
+      <div class="swiper swiper-testimonials">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-quote">ContentClik helped us reach 4x more decision-makers than our own distribution
+                ever could. The leads were warmer and converted faster than any channel we had tried before.</p>
+              <div class="testimonial-author">
+                <img src="./stencils.png"
+                  alt="Profile photo of Sarah M., VP of Marketing at an enterprise HR technology company"
+                  class="testimonial-avatar" />
+                <div>
+                  <div class="testimonial-name">Sarah M.</div>
+                  <div class="testimonial-role">VP Marketing, HR Tech Firm</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-quote">As a reader, I trust ContentClik the way I trust a well-curated magazine.
+                Every briefing I open has been relevant. That kind of quality is rare in a world of algorithm-generated
+                noise.</p>
+              <div class="testimonial-author">
+                <img src="./stencils.png"
+                  alt="Profile photo of Daniel R., People Operations lead at a high-growth startup"
+                  class="testimonial-avatar" />
+                <div>
+                  <div class="testimonial-name">Daniel R.</div>
+                  <div class="testimonial-role">People Ops Lead, Growth Stage Startup</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-quote">We published our annual benchmark report on ContentClik and generated 680
+                qualified contacts in two weeks. Our previous launch on our own site got us 40. That difference says it
+                all.</p>
+              <div class="testimonial-author">
+                <img src="./stencils.png"
+                  alt="Profile photo of Priya L., Head of Content at a B2B analytics and research company"
+                  class="testimonial-avatar" />
+                <div>
+                  <div class="testimonial-name">Priya L.</div>
+                  <div class="testimonial-role">Head of Content, B2B Analytics Brand</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-quote">I open the Monday briefing every week without fail. It is the one newsletter
+                I fully read every time. The curation feels intentional, like someone genuinely selected each piece for
+                people like me.</p>
+              <div class="testimonial-author">
+                <img src="./stencils.png"
+                  alt="Profile photo of Marcus T., senior management consultant at a global advisory firm"
+                  class="testimonial-avatar" />
+                <div>
+                  <div class="testimonial-name">Marcus T.</div>
+                  <div class="testimonial-role">Senior Consultant, Management Firm</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-quote">The format variety on ContentClik is what sets it apart. eBooks, white
+                papers, webinar replays. I can go deep on a topic or skim for a quick takeaway. That flexibility keeps
+                me coming back.</p>
+              <div class="testimonial-author">
+                <img src="./stencils.png"
+                  alt="Profile photo of Ayesha K., Director of Strategy at a mid-market financial services company"
+                  class="testimonial-avatar" />
+                <div>
+                  <div class="testimonial-name">Ayesha K.</div>
+                  <div class="testimonial-role">Director of Strategy, Financial Services</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination testi-pagination"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================
+       PUBLISHER CTA STRIP
+  ======================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="pub-strip" data-reveal>
+        <div>
+          <div class="section-label" style="color:rgba(250,248,244,0.45);margin-bottom:var(--sp-3);">For Publishers and
+            Brands</div>
+          <h2>Your content deserves a <em>bigger audience.</em></h2>
+          <p>Join 500 verified publishers already using ContentClik to distribute content, build authority, and generate
+            qualified leads at a fraction of traditional marketing cost.</p>
+        </div>
+        <div class="pub-strip-cta">
+          <a href="/publishers.html" class="btn btn--amber btn--lg" style="text-align:center;">Start Publishing</a>
+          <a href="/about.html" class="btn-ghost-light">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       COMPULSORY FORM - NEWSLETTER
+  ======================================================== -->
+  <section class="nl-section">
+    <div class="container">
+      <div class="nl-wrap">
+
+        <!-- Left: Copy -->
+        <div class="nl-left" data-reveal>
+          <div class="section-label">Weekly Intelligence</div>
+          <h2>Stay one step ahead.</h2>
+          <p>Every Monday we send the most important research briefings, handpicked for professionals who take their
+            knowledge seriously. No noise, no sponsored filler. Just the content that matters.</p>
+
+          <div class="nl-trust-list">
+            <div class="nl-trust-item">180,000 weekly readers</div>
+            <div class="nl-trust-item">Curated by editors, not algorithms</div>
+            <div class="nl-trust-item">Unsubscribe any time</div>
+            <div class="nl-trust-item">Zero spam, guaranteed</div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div data-reveal>
+          <form class="newsletter-form" style="display:flex;flex-direction:column;gap:var(--sp-4);">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-input" placeholder="Your first name" data-required />
+                <span class="form-error" style="display:none;"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Work Email</label>
+                <input type="email" class="form-input" placeholder="you@company.com" data-required />
+                <span class="form-error" style="display:none;"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Primary Interest</label>
+              <select class="form-input form-select">
+                <option value="">Select a topic</option>
+                <option value="hr">Human Resources</option>
+                <option value="tech">Technology</option>
+                <option value="marketing">Marketing</option>
+                <option value="leadership">Leadership</option>
+                <option value="finance">Finance</option>
+                <option value="ops">Operations</option>
+                <option value="lifescience">Life Sciences</option>
+                <option value="lifestyle">Lifestyle</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Your Role</label>
+              <select class="form-input form-select">
+                <option value="">Select your role</option>
+                <option value="ic">Individual Contributor</option>
+                <option value="manager">Manager / Team Lead</option>
+                <option value="director">Director / VP</option>
+                <option value="csuite">C-Suite / Executive</option>
+                <option value="founder">Founder / Entrepreneur</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn--amber btn--lg" style="width:100%;">Get Weekly Briefings</button>
+
+            <p style="font-size:0.76rem;color:var(--ink-muted);text-align:center;">
+              By subscribing you agree to our
+              <a href="/privacy.html" style="color:var(--amber);">Privacy Policy</a>.
+              No spam, ever.
+            </p>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (injected by CommonJS) -->
+  <footer id="cc-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="modules/nav.js"></script>
+  <script src="modules/footer.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <script>
+    /* ----------------------------------------------------------
+       HOMEPAGE-SPECIFIC JS
+    ---------------------------------------------------------- */
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+      /* Topics horizontal free-scroll swiper */
+      new Swiper('.swiper-topics', {
+        slidesPerView: 'auto',
+        spaceBetween: 12,
+        freeMode: true,
+        grabCursor: true,
+        mousewheel: { forceToAxis: true },
+      });
+
+      /* Testimonials swiper (override from app.js if needed) */
+      new Swiper('.swiper-testimonials', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        autoplay: { delay: 6000, disableOnInteraction: false },
+        pagination: {
+          el: '.testi-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+
+      /* Scroll reveal for data-reveal elements */
+      const reveals = document.querySelectorAll('[data-reveal]');
+      const revealObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            revealObs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      reveals.forEach(function (el) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(28px)';
+        el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+        revealObs.observe(el);
+      });
+
+      /* Counter animation */
+      const counters = document.querySelectorAll('[data-count]');
+      const countObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var el = entry.target;
+          var target = parseInt(el.dataset.count, 10);
+          var suffix = el.dataset.suffix || '';
+          var start = 0;
+          var step = Math.ceil(target / 60);
+          var timer = setInterval(function () {
+            start += step;
+            if (start >= target) {
+              el.textContent = target + suffix;
+              clearInterval(timer);
+            } else {
+              el.textContent = start + suffix;
+            }
+          }, 18);
+          countObs.unobserve(el);
+        });
+      }, { threshold: 0.5 });
+
+      counters.forEach(function (el) { countObs.observe(el); });
+
+    });
+  </script>
+
+</body>
+
+</html>
