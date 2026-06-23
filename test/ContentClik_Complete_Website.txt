@@ -2235,7 +2235,8 @@ document.addEventListener('DOMContentLoaded', () => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="ContentClik is where great content meets its audience. Discover curated research, eBooks, reports, and guides that grow your thinking."/>
   <title>ContentClik - Intelligence Worth Reading</title>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
@@ -2522,7 +2523,8 @@ document.addEventListener('DOMContentLoaded', () => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Explore thousands of curated eBooks, white papers, reports, guides, and webinars on ContentClik."/>
   <title>Explore - ContentClik</title>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
@@ -2788,7 +2790,8 @@ document.addEventListener('DOMContentLoaded', () => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Digital Employee Experience Takes Center Stage - Research briefing on the future of employee digital work environments."/>
   <title>Digital Employee Experience Takes Center Stage - ContentClik</title>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
@@ -2983,7 +2986,8 @@ document.addEventListener('DOMContentLoaded', () => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Browse content by topic on ContentClik. From HR to technology, marketing to leadership."/>
   <title>Topics - ContentClik</title>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
@@ -3162,7 +3166,8 @@ document.addEventListener('DOMContentLoaded', () => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Curated collections of the best research and content on ContentClik. Handpicked by our editorial team."/>
   <title>Collections - ContentClik</title>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
@@ -3359,7 +3364,8 @@ document.addEventListener('DOMContentLoaded', () => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Publish on ContentClik. Reach 1.8 million monthly readers, generate qualified leads, and build your authority."/>
   <title>For Publishers - ContentClik</title>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
@@ -3572,7 +3578,8 @@ document.addEventListener('DOMContentLoaded', () => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="ContentClik is a publisher platform built to connect smart content with curious professionals."/>
   <title>About - ContentClik</title>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
@@ -3728,7 +3735,8 @@ document.addEventListener('DOMContentLoaded', () => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Join the ContentClik team. We are building the future of professional content discovery."/>
   <title>Careers - ContentClik</title>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
@@ -3954,7 +3962,8 @@ document.addEventListener('DOMContentLoaded', () => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Your ContentClik dashboard. Manage your saved content, reading history, and preferences."/>
   <title>Dashboard - ContentClik</title>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
@@ -4121,7 +4130,8 @@ document.addEventListener('DOMContentLoaded', () => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="ContentClik Privacy Policy. How we collect, use, and protect your information."/>
   <title>Privacy Policy - ContentClik</title>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
 </head>
 <body>
 
@@ -4282,7 +4292,8 @@ document.addEventListener('DOMContentLoaded', () => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="ContentClik Terms of Service. The rules and responsibilities for using our platform."/>
   <title>Terms of Service - ContentClik</title>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
 </head>
 <body>
 

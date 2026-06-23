@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Your ContentClik dashboard. Manage your saved content, reading history, and preferences."/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Your ContentClik dashboard. Manage your saved content, reading history, and preferences." />
   <title>Dashboard - ContentClik</title>
-  <link rel="stylesheet" href="assets/css/main.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+
 <body>
 
   <div id="cc-nav"></div>
@@ -25,22 +29,25 @@
           <div id="dashboardGuest" style="margin-bottom:var(--sp-7);">
             <div class="section-label">Welcome Back</div>
             <h1 style="font-size:2rem;">Sign in to your account.</h1>
-            <p class="lead" style="margin-top:var(--sp-3);">Access your saved content, track your reading, and manage your preferences.</p>
-            <div style="background:#fff;border:1px solid var(--ivory-dark);border-radius:var(--radius-lg);padding:var(--sp-7);margin-top:var(--sp-6);max-width:480px;">
+            <p class="lead" style="margin-top:var(--sp-3);">Access your saved content, track your reading, and manage
+              your preferences.</p>
+            <div
+              style="background:#fff;border:1px solid var(--ivory-dark);border-radius:var(--radius-lg);padding:var(--sp-7);margin-top:var(--sp-6);max-width:480px;">
               <h3 style="margin-bottom:var(--sp-5);">Sign In</h3>
               <form id="signInForm" style="display:flex;flex-direction:column;gap:var(--sp-4);">
                 <div class="form-group">
                   <label class="form-label">Email</label>
-                  <input type="email" class="form-input" placeholder="you@email.com" id="loginEmail" data-required/>
+                  <input type="email" class="form-input" placeholder="you@email.com" id="loginEmail" data-required />
                   <span class="form-error" style="display:none;"></span>
                 </div>
                 <div class="form-group">
                   <label class="form-label">Password</label>
-                  <input type="password" class="form-input" placeholder="Your password" id="loginPass" data-required/>
+                  <input type="password" class="form-input" placeholder="Your password" id="loginPass" data-required />
                   <span class="form-error" style="display:none;"></span>
                 </div>
                 <button type="submit" class="btn btn--primary btn--lg" style="width:100%;">Sign In</button>
-                <p style="text-align:center;font-size:0.85rem;color:var(--ink-muted);">No account yet? <a href="#" style="color:var(--amber);">Create one free</a></p>
+                <p style="text-align:center;font-size:0.85rem;color:var(--ink-muted);">No account yet? <a href="#"
+                    style="color:var(--amber);">Create one free</a></p>
               </form>
             </div>
           </div>
@@ -55,7 +62,8 @@
               <button class="btn btn--outline btn--sm" id="signOutBtn">Sign Out</button>
             </div>
             <div style="display:flex;flex-direction:column;gap:var(--sp-4);" id="savedList">
-              <p style="color:var(--ink-muted);">Nothing saved yet. Start exploring and bookmark content to find it here.</p>
+              <p style="color:var(--ink-muted);">Nothing saved yet. Start exploring and bookmark content to find it
+                here.</p>
             </div>
             <a href="/explore.html" class="btn btn--amber" style="margin-top:var(--sp-6);">Explore Content</a>
           </div>
@@ -82,13 +90,19 @@
           </div>
           <div class="panel-box">
             <h5>Recommended for You</h5>
-            <a href="/detail.html" class="panel-list-item" style="text-decoration:none;display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--ivory-mid);">
-              <img src="./stencils.png" alt="Recommended: Future of HR 2026 briefing" class="panel-list-img"/>
-              <div class="panel-list-text"><h6>Future of HR 2026</h6><span class="caption">eBook &middot; 10 min</span></div>
+            <a href="/detail.html" class="panel-list-item"
+              style="text-decoration:none;display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--ivory-mid);">
+              <img src="./stencils.png" alt="Recommended: Future of HR 2026 briefing" class="panel-list-img" />
+              <div class="panel-list-text">
+                <h6>Future of HR 2026</h6><span class="caption">eBook &middot; 10 min</span>
+              </div>
             </a>
-            <a href="/detail.html" class="panel-list-item" style="text-decoration:none;display:flex;gap:12px;padding:12px 0;">
-              <img src="./stencils.png" alt="Recommended: Marketing Automation Guide briefing" class="panel-list-img"/>
-              <div class="panel-list-text"><h6>Marketing Automation Guide</h6><span class="caption">Guide &middot; 7 min</span></div>
+            <a href="/detail.html" class="panel-list-item"
+              style="text-decoration:none;display:flex;gap:12px;padding:12px 0;">
+              <img src="./stencils.png" alt="Recommended: Marketing Automation Guide briefing" class="panel-list-img" />
+              <div class="panel-list-text">
+                <h6>Marketing Automation Guide</h6><span class="caption">Guide &middot; 7 min</span>
+              </div>
             </a>
           </div>
         </aside>
@@ -105,10 +119,11 @@
           <div class="section-label">Stay Informed</div>
           <h2>Set your weekly briefing.</h2>
           <p class="lead">Choose what topics matter most and get a curated briefing every Monday.</p>
-          <form class="newsletter-form" style="display:flex;flex-direction:column;gap:var(--sp-4);margin-top:var(--sp-6);">
+          <form class="newsletter-form"
+            style="display:flex;flex-direction:column;gap:var(--sp-4);margin-top:var(--sp-6);">
             <div class="form-group">
               <label class="form-label">Work Email</label>
-              <input type="email" class="form-input" placeholder="you@company.com" data-required/>
+              <input type="email" class="form-input" placeholder="you@company.com" data-required />
               <span class="form-error" style="display:none;"></span>
             </div>
             <div class="form-group">
@@ -158,4 +173,5 @@
     }
   </script>
 </body>
+
 </html>

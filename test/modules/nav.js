@@ -6,17 +6,17 @@
 (function () {
   const navHTML = `
     <nav class="nav-inner">
-      <a href="/index.html" class="nav-logo">
+      <a href="./index.html" class="nav-logo">
         Content<span>Clik</span>
         <div class="nav-logo-dot"></div>
       </a>
 
       <div class="nav-links">
-        <a href="/explore.html">Explore</a>
-        <a href="/topics.html">Topics</a>
-        <a href="/collections.html">Collections</a>
-        <a href="/publishers.html">For Publishers</a>
-        <a href="/about.html">About</a>
+        <a href="./explore.html">Explore</a>
+        <a href="./topics.html">Topics</a>
+        <a href="./collections.html">Collections</a>
+        <a href="./publishers.html">For Publishers</a>
+        <a href="./about.html">About</a>
       </div>
 
       <div class="nav-actions">
@@ -25,8 +25,8 @@
             <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
           </svg>
         </button>
-        <a href="/dashboard.html" class="btn btn--outline btn--sm">Sign In</a>
-        <a href="/publishers.html" class="btn btn--amber btn--sm">Get Started</a>
+        <a href="./dashboard.html" class="btn btn--outline btn--sm">Sign In</a>
+        <a href="./publishers.html" class="btn btn--amber btn--sm">Get Started</a>
         <div class="nav-hamburger" id="hamburger" role="button" aria-label="Menu">
           <span></span><span></span><span></span>
         </div>
@@ -34,14 +34,14 @@
     </nav>
 
     <div class="nav-mobile" id="mobileMenu">
-      <a href="/index.html">Home</a>
-      <a href="/explore.html">Explore</a>
-      <a href="/topics.html">Topics</a>
-      <a href="/collections.html">Collections</a>
-      <a href="/publishers.html">For Publishers</a>
-      <a href="/about.html">About</a>
-      <a href="/careers.html">Careers</a>
-      <a href="/dashboard.html">Sign In</a>
+      <a href="./index.html">Home</a>
+      <a href="./explore.html">Explore</a>
+      <a href="./topics.html">Topics</a>
+      <a href="./collections.html">Collections</a>
+      <a href="./publishers.html">For Publishers</a>
+      <a href="./about.html">About</a>
+      <a href="./careers.html">Careers</a>
+      <a href="./dashboard.html">Sign In</a>
     </div>
 
     <div class="search-overlay" id="searchOverlay">

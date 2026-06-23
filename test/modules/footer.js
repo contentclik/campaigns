@@ -18,21 +18,21 @@
       <div class="footer-col">
         <h6>Platform</h6>
         <ul>
-          <li><a href="/explore.html">Explore Content</a></li>
-          <li><a href="/topics.html">Topics</a></li>
-          <li><a href="/collections.html">Collections</a></li>
-          <li><a href="/publishers.html">For Publishers</a></li>
-          <li><a href="/dashboard.html">Your Dashboard</a></li>
+          <li><a href="./explore.html">Explore Content</a></li>
+          <li><a href="./topics.html">Topics</a></li>
+          <li><a href="./collections.html">Collections</a></li>
+          <li><a href="./publishers.html">For Publishers</a></li>
+          <li><a href="./dashboard.html">Your Dashboard</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h6>Company</h6>
         <ul>
-          <li><a href="/about.html">About Us</a></li>
-          <li><a href="/careers.html">Careers</a></li>
-          <li><a href="/privacy.html">Privacy Policy</a></li>
-          <li><a href="/terms.html">Terms of Service</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./careers.html">Careers</a></li>
+          <li><a href="./privacy.html">Privacy Policy</a></li>
+          <li><a href="./terms.html">Terms of Service</a></li>
         </ul>
       </div>
 
@@ -40,7 +40,7 @@
         <h5>Weekly Briefing</h5>
         <p>Smart content, delivered every Monday. No noise.</p>
         <div class="footer-form">
-          <input type="email" placeholder="Your work email" id="footerEmail"/>
+          <input type="email" placeholder="Your work email" id="footerEmail"./>
           <button type="button" onclick="footerSubscribe()">Join</button>
         </div>
         <p style="font-size:0.75rem;color:var(--ink-light);margin-top:8px;">No spam. Unsubscribe anytime.</p>
@@ -50,9 +50,9 @@
     <div class="footer-bottom">
       <p>&copy; 2026 ContentClik. All rights reserved. A LogicPublish Publication.</p>
       <div class="footer-bottom-links">
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/careers.html">Careers</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <a href="./careers.html">Careers</a>
       </div>
     </div>
   `;

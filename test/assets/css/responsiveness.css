@@ -1,0 +1,1027 @@
+/* ================================================================
+   CONTENTCLIK — RESPONSIVENESS.CSS
+   Bootstrap 5 breakpoint system layered over main.css
+   
+   HOW TO LINK — add AFTER main.css in every HTML file:
+   <link rel="stylesheet" href="assets/css/responsiveness.css"/>
+   
+   For index.html (special homepage) — because it has its own
+   inline <style> block, place this link AFTER that closing
+   </style> tag so the cascade order is:
+   main.css → index inline styles → responsiveness.css (wins)
+
+   ── Bootstrap 5 Breakpoints (max-width desktop-first) ──────────
+   XXL  ≤ 1399.98px   (xl → xxl transition)
+   XL   ≤ 1199.98px   (lg → xl transition)
+   LG   ≤  991.98px   ← MAIN GAP (main.css uses ≤1024px)
+   MD   ≤  767.98px   (main.css already covers ≤768px)
+   SM   ≤  575.98px   ← MAIN GAP (main.css uses ≤480px)
+   XS   ≤  399.98px   Extra-small phones
+   ────────────────────────────────────────────────────────────────
+   ================================================================ */
+
+
+/* ================================================================
+   CAROUSEL — GPU SMOOTHNESS (applies to all screen sizes)
+   Gives all Swiper carousels hardware-accelerated rendering so
+   autoplay and touch-drag feel buttery, not janky.
+   ================================================================ */
+
+.swiper-wrapper {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+.swiper-slide {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* ================================================================
+   XXL BREAKPOINT — ≤ 1399.98px
+   Light adjustments for large-but-not-fullhd screens.
+   main.css max-width: 1280px container already handles layout.
+   ================================================================ */
+
+@media (max-width: 1399.98px) {
+
+    /* Slight section compression */
+    .section--lg {
+        padding: calc(var(--sp-10) + var(--sp-3)) 0;
+    }
+
+    /* Stat-band on homepage — start compressing separator at xxl */
+    .stat-band-item {
+        padding: var(--sp-4) var(--sp-5);
+    }
+}
+
+
+/* ================================================================
+   XL BREAKPOINT — ≤ 1199.98px
+   Between main.css's 1024px and full desktop.
+   ================================================================ */
+
+@media (max-width: 1199.98px) {
+
+    /* Section spacing */
+    .section {
+        padding: var(--sp-9) 0;
+    }
+
+    .section--lg {
+        padding: var(--sp-10) 0;
+    }
+
+    /* Homepage stat band — suppress separators earlier */
+    .stat-band-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-sep {
+        display: none;
+    }
+
+    .stat-band-hp {
+        padding: var(--sp-9) 0;
+    }
+
+    /* Formats row — 4 columns at xl (keeps things readable) */
+    .formats-row {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Editorial dispatch — 3 columns still fine at xl */
+    .editorial-wrap {
+        gap: var(--sp-5);
+    }
+}
+
+
+/* ================================================================
+   LG BREAKPOINT — ≤ 991.98px
+   The main gap between main.css (1024px) and Bootstrap LG (992px).
+   This is where layout shifts from desktop multi-col to tablet.
+   ================================================================ */
+
+@media (max-width: 991.98px) {
+
+    /* ---- SECTION SPACING ---- */
+    .section {
+        padding: var(--sp-8) 0;
+    }
+
+    .section--sm {
+        padding: var(--sp-6) 0;
+    }
+
+    .section--lg {
+        padding: var(--sp-9) 0;
+    }
+
+    /* ---- NAVIGATION ---- */
+    /* Show hamburger at LG (992) not just MD (768) as main.css does */
+    .nav-links {
+        display: none;
+    }
+
+    .nav-hamburger {
+        display: flex;
+    }
+
+    /* ---- PAGE HEADER ---- */
+    .page-header {
+        padding: calc(var(--nav-height) + var(--sp-8)) 0 var(--sp-7);
+    }
+
+    /* ---- FOOTER GRID ---- */
+    /* Bootstrap LG: drop to 2-col. main.css already does at 1024. */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--sp-6);
+    }
+
+    /* ---- CONTENT + PANEL LAYOUT ---- */
+    /* Stack panel below content sooner than main.css 1024px */
+    .page-with-panel {
+        grid-template-columns: 1fr;
+        gap: var(--sp-7);
+    }
+
+    .panel {
+        position: static;
+    }
+
+    /* ---- STATS BAND (global — publishers page) ---- */
+    .stats-band .grid-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats-band {
+        padding: var(--sp-7) 0;
+    }
+
+    .stat-item strong {
+        font-size: 2rem;
+    }
+
+    /* ---- HERO (standard pages, .hero class) ---- */
+    .hero {
+        padding: calc(var(--nav-height) + var(--sp-8)) 0 var(--sp-8);
+    }
+
+    .hero .lead {
+        max-width: 100%;
+    }
+
+    /* ---- TESTIMONIALS ---- */
+    .testimonial-card {
+        padding: var(--sp-6);
+    }
+
+    /* ---- GRID UTILITIES ---- */
+    /* grid-3 → 2-col at LG (see range rule below for clean cascade) */
+    /* grid-4 already 2-col from main.css ≤1024, just harmonize timing */
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ================================================================
+     INDEX.HTML — HOMEPAGE SPECIFIC (LG)
+     The homepage inline <style> covers 1024px and 768px.
+     This block adds the 991px gap.
+     ================================================================ */
+
+    /* Hero HP */
+    .hero-hp {
+        min-height: auto;
+        padding-top: calc(var(--nav-height) + var(--sp-8));
+        padding-bottom: var(--sp-9);
+    }
+
+    .hero-hp::after {
+        display: none;
+    }
+
+    .hero-hp-grid {
+        grid-template-columns: 1fr;
+        gap: var(--sp-7);
+    }
+
+    .hero-hp-lead {
+        max-width: 100%;
+    }
+
+    .hero-cta-row {
+        flex-wrap: wrap;
+        gap: var(--sp-3);
+    }
+
+    /* Mosaic — 3-col when stacked below hero text */
+    .hero-mosaic {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 580px;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+
+    .mosaic-card--tall {
+        grid-row: span 1;
+    }
+
+    .mosaic-card--tall img {
+        aspect-ratio: 4/3;
+    }
+
+    .mosaic-float {
+        right: 0;
+        min-width: 170px;
+    }
+
+    /* Trending section */
+    .trending-wrap {
+        grid-template-columns: 1fr;
+        gap: var(--sp-6);
+    }
+
+    /* Editorial dispatch */
+    .editorial-wrap {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--sp-5);
+    }
+
+    .ed-feature {
+        grid-column: span 2;
+    }
+
+    /* Homepage stat band */
+    .stat-band-hp {
+        padding: var(--sp-8) 0;
+    }
+
+    .stat-band-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-sep {
+        display: none;
+    }
+
+    .stat-band-item {
+        padding: var(--sp-3) var(--sp-5);
+    }
+
+    /* Formats band */
+    .formats-band {
+        padding: var(--sp-7) 0;
+    }
+
+    .formats-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* How it works */
+    .how-wrap {
+        grid-template-columns: 1fr;
+        gap: var(--sp-7);
+    }
+
+    .how-sep {
+        display: none;
+    }
+
+    /* Testimonials band */
+    .testi-band {
+        padding: var(--sp-8) 0;
+    }
+
+    /* Publisher CTA strip */
+    .pub-strip {
+        grid-template-columns: 1fr;
+        padding: var(--sp-8) var(--sp-8);
+        gap: var(--sp-6);
+        border-radius: var(--radius-lg);
+    }
+
+    .pub-strip-cta {
+        flex-direction: row;
+        min-width: unset;
+    }
+
+    /* Newsletter section */
+    .nl-section {
+        padding: var(--sp-9) 0;
+    }
+
+    .nl-wrap {
+        grid-template-columns: 1fr;
+        gap: var(--sp-7);
+    }
+
+    /* Topics band */
+    .topics-band {
+        padding: var(--sp-6) 0;
+    }
+
+    .topics-band-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--sp-2);
+    }
+}
+
+
+/* ================================================================
+   GRID-3 RANGE — only between 769px and 991.98px
+   Using a range query prevents conflict with main.css's ≤768px
+   rule which collapses grid-3 to 1-col. Without this range query,
+   a max-width:991px rule in a later stylesheet would override
+   main.css at 700px and wrongly show 2-col instead of 1-col.
+   ================================================================ */
+
+@media (min-width: 769px) and (max-width: 991.98px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ================================================================
+   SM BREAKPOINT — ≤ 575.98px
+   The second main gap. main.css's smallest breakpoint is ≤480px.
+   This fills 480-575px AND adds finer control below 480px.
+   ================================================================ */
+
+@media (max-width: 575.98px) {
+
+    /* ---- SPACING ---- */
+    .section {
+        padding: var(--sp-7) 0;
+    }
+
+    .section--sm {
+        padding: var(--sp-5) 0;
+    }
+
+    .section--lg {
+        padding: var(--sp-8) 0;
+    }
+
+    .container {
+        padding: 0 var(--sp-4);
+    }
+
+    /* ---- TYPOGRAPHY ---- */
+    h1 {
+        font-size: clamp(1.8rem, 7.5vw, 2.2rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 6vw, 1.9rem);
+    }
+
+    h3 {
+        font-size: clamp(1.15rem, 4.5vw, 1.4rem);
+    }
+
+    .lead {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* ---- NAVIGATION ---- */
+    /* Hide "Sign In" outline button — keep only "Get Started" + hamburger */
+    .nav-actions .btn--outline {
+        display: none;
+    }
+
+    .nav-inner {
+        padding: 0 var(--sp-4);
+    }
+
+    /* ---- BUTTONS ---- */
+    .btn--lg {
+        padding: 12px 22px;
+        font-size: 0.93rem;
+    }
+
+    .hero-actions {
+        gap: var(--sp-3);
+    }
+
+    /* ---- HERO (standard pages) ---- */
+    .hero {
+        padding: calc(var(--nav-height) + var(--sp-6)) 0 var(--sp-7);
+    }
+
+    .hero-stat-row {
+        gap: var(--sp-4);
+        flex-wrap: wrap;
+    }
+
+    .hero-stat strong {
+        font-size: 1.6rem;
+    }
+
+    /* ---- PAGE HEADER ---- */
+    .page-header {
+        padding: calc(var(--nav-height) + var(--sp-6)) 0 var(--sp-5);
+    }
+
+    /* ---- GRID UTILITIES ---- */
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* keep 2-col at sm */
+
+    /* ---- CARDS ---- */
+    .card-body {
+        padding: var(--sp-4);
+    }
+
+    .card-featured-body {
+        padding: var(--sp-4);
+    }
+
+    .card-footer {
+        padding: var(--sp-3) var(--sp-4);
+    }
+
+    .card-list-img {
+        height: 160px;
+    }
+
+    /* ---- TESTIMONIALS ---- */
+    .testimonial-card {
+        padding: var(--sp-5);
+    }
+
+    .testimonial-quote {
+        font-size: 0.96rem;
+        line-height: 1.65;
+        margin-bottom: var(--sp-4);
+    }
+
+    /* ---- STATS BAND (global) ---- */
+    .stat-item strong {
+        font-size: 1.8rem;
+    }
+
+    .stats-band {
+        padding: var(--sp-6) 0;
+    }
+
+    /* ---- FORMS ---- */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section {
+        padding: var(--sp-6) var(--sp-4);
+        border-radius: var(--radius-lg);
+    }
+
+    .gate-box {
+        padding: var(--sp-5) var(--sp-4);
+    }
+
+    /* ---- FOOTER ---- */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--sp-3);
+        text-align: center;
+    }
+
+    .footer-bottom-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--sp-3);
+    }
+
+    .footer-form {
+        flex-direction: column;
+    }
+
+    .footer-form button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    #cc-footer {
+        padding: var(--sp-7) 0 var(--sp-5);
+    }
+
+    /* ---- MODAL ---- */
+    .modal {
+        padding: var(--sp-5);
+        border-radius: var(--radius-md);
+    }
+
+    .modal-overlay {
+        padding: var(--sp-4);
+    }
+
+    /* ---- TOAST ---- */
+    .toast-container {
+        right: var(--sp-3);
+        left: var(--sp-3);
+        bottom: var(--sp-4);
+    }
+
+    .toast {
+        max-width: 100%;
+        font-size: 0.85rem;
+        padding: var(--sp-3) var(--sp-4);
+    }
+
+    /* ---- SEARCH OVERLAY ---- */
+    .search-overlay {
+        padding-top: 80px;
+    }
+
+    .search-box {
+        width: 95%;
+        padding: var(--sp-4);
+    }
+
+    .search-input-wrap input {
+        font-size: 1rem;
+    }
+
+    /* ---- SWIPER NAV BUTTONS ---- */
+    /* Hide prev/next arrows on small screens — finger-swipe is enough */
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
+    }
+
+    .swiper {
+        padding-bottom: var(--sp-5) !important;
+    }
+
+    /* ---- JOB CARDS (careers) ---- */
+    .job-card {
+        flex-direction: column;
+        gap: var(--sp-4);
+    }
+
+    .job-card .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* ---- FILTER BAR (explore) ---- */
+    .filter-bar {
+        gap: var(--sp-2);
+    }
+
+    .filter-bar-label {
+        width: 100%;
+    }
+
+    /* ---- BREADCRUMB ---- */
+    .breadcrumb {
+        font-size: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    /* ---- SECTION HEADER ---- */
+    .section-header .lead {
+        font-size: 0.95rem;
+    }
+
+    /* ----  PANEL BOXES (sidebar — stacked) ---- */
+    .panel-box {
+        padding: var(--sp-4);
+    }
+
+    /* ================================================================
+     INDEX.HTML — HOMEPAGE SPECIFIC (SM ≤575px)
+     ================================================================ */
+
+    /* Hero HP */
+    .hero-hp {
+        padding-top: calc(var(--nav-height) + var(--sp-6));
+        padding-bottom: var(--sp-7);
+    }
+
+    .hero-hp-h1 {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+    }
+
+    .hero-hp-lead {
+        font-size: 0.97rem;
+        line-height: 1.72;
+    }
+
+    /* Hero CTA row — stack vertically */
+    .hero-cta-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--sp-3);
+    }
+
+    .hero-divider {
+        display: none;
+    }
+
+    /* Hero stats */
+    .hero-hp .hero-stat-row {
+        gap: var(--sp-4);
+        flex-wrap: wrap;
+        padding-top: var(--sp-5);
+    }
+
+    .hero-hp .hero-stat strong {
+        font-size: 1.6rem;
+    }
+
+    /* Mosaic — 2-col */
+    .hero-mosaic {
+        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+        padding-bottom: 56px;
+    }
+
+    .mosaic-float {
+        right: 0;
+        min-width: 150px;
+        padding: 11px 13px;
+        font-size: 0.9rem;
+    }
+
+    .mosaic-float-title {
+        font-size: 0.82rem;
+        line-height: 1.3;
+    }
+
+    /* Ticker strip */
+    .ticker-wrap {
+        padding: 9px 0;
+    }
+
+    .ticker-link {
+        font-size: 0.7rem;
+    }
+
+    /* Trending section */
+    .trending-big-overlay {
+        padding: var(--sp-5) var(--sp-4) var(--sp-6);
+    }
+
+    .trending-big-overlay h3 {
+        font-size: 1.2rem;
+        line-height: 1.25;
+    }
+
+    .trending-big-overlay p {
+        font-size: 0.84rem;
+    }
+
+    .trending-row {
+        gap: var(--sp-3);
+        padding: var(--sp-3) 0;
+    }
+
+    .t-num {
+        font-size: 1.5rem;
+        min-width: 24px;
+    }
+
+    .t-thumb {
+        width: 52px;
+        height: 42px;
+    }
+
+    .t-body h5 {
+        font-size: 0.88rem;
+    }
+
+    .trending-list-label {
+        font-size: 0.68rem;
+    }
+
+    /* Editorial dispatch — single col at SM */
+    .editorial-wrap {
+        grid-template-columns: 1fr;
+        gap: var(--sp-5);
+    }
+
+    .ed-feature {
+        grid-column: span 1;
+    }
+
+    .ed-feature h3 {
+        font-size: 1.2rem;
+    }
+
+    .ed-side h4 {
+        font-size: 0.96rem;
+    }
+
+    /* Homepage stat band */
+    .stat-band-hp {
+        padding: var(--sp-6) 0;
+    }
+
+    .stat-band-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-band-item {
+        padding: var(--sp-3) var(--sp-4);
+    }
+
+    .stat-band-item strong {
+        font-size: clamp(1.9rem, 7.5vw, 2.6rem);
+    }
+
+    .stat-band-source {
+        margin-top: var(--sp-5);
+        padding-top: var(--sp-5);
+        font-size: 0.65rem;
+    }
+
+    /* Formats band — 2-col at SM */
+    .formats-band {
+        padding: var(--sp-6) 0;
+    }
+
+    .formats-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--sp-3);
+    }
+
+    .format-tile {
+        padding: var(--sp-4) var(--sp-3);
+    }
+
+    .format-tile-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .format-tile h5 {
+        font-size: 0.82rem;
+    }
+
+    /* Testimonials band */
+    .testi-band {
+        padding: var(--sp-7) 0;
+    }
+
+    /* Publisher CTA strip */
+    .pub-strip {
+        padding: var(--sp-6) var(--sp-5);
+        border-radius: var(--radius-md);
+        gap: var(--sp-5);
+    }
+
+    .pub-strip h2 {
+        font-size: 1.5rem;
+    }
+
+    .pub-strip p {
+        font-size: 0.9rem;
+    }
+
+    .pub-strip-cta {
+        flex-direction: column;
+    }
+
+    /* Newsletter */
+    .nl-section {
+        padding: var(--sp-7) 0;
+    }
+
+    .nl-wrap {
+        gap: var(--sp-5);
+    }
+
+    .nl-left h2 {
+        font-size: 1.6rem;
+    }
+
+    .nl-left p {
+        font-size: 0.95rem;
+    }
+
+    .nl-trust-list {
+        flex-direction: column;
+        gap: var(--sp-2);
+    }
+}
+
+
+/* ================================================================
+   XS BREAKPOINT — ≤ 399.98px
+   iPhone SE, Galaxy A series, and other compact phones.
+   ================================================================ */
+
+@media (max-width: 399.98px) {
+
+    /* Tighter container */
+    .container {
+        padding: 0 14px;
+    }
+
+    /* Typography floor */
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    .lead {
+        font-size: 0.95rem;
+    }
+
+    /* Buttons — compress */
+    .btn--lg {
+        padding: 11px 18px;
+        font-size: 0.88rem;
+    }
+
+    .btn--sm {
+        padding: 7px 14px;
+        font-size: 0.8rem;
+    }
+
+    /* Homepage mosaic — single col at XS */
+    .hero-mosaic {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-bottom: 0;
+    }
+
+    /* Mosaic float — pull out of absolute, sit inline */
+    .mosaic-float {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: var(--sp-3);
+        min-width: unset;
+        width: 100%;
+        border-radius: var(--radius-sm);
+    }
+
+    /* Homepage hero */
+    .hero-hp-h1 {
+        font-size: 1.9rem;
+        line-height: 1.1;
+    }
+
+    /* Formats — single col at XS */
+    .formats-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats — single col */
+    .stat-band-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-band-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: var(--sp-4);
+    }
+
+    .stat-band-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-band-item strong {
+        font-size: 2.2rem;
+    }
+
+    /* Publisher strip */
+    .pub-strip {
+        padding: var(--sp-5) 14px;
+    }
+
+    .pub-strip h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Grid-4 — single col at XS */
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats band (global — publishers page) */
+    .stats-band .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Toast */
+    .toast {
+        padding: var(--sp-3);
+        font-size: 0.82rem;
+        gap: var(--sp-2);
+    }
+
+    /* Footer */
+    .footer-bottom-links {
+        gap: var(--sp-2);
+    }
+}
+
+
+/* ================================================================
+   ACCESSIBILITY — prefers-reduced-motion
+   Supplements main.css existing rule with homepage-specific
+   animation classes that main.css doesn't know about.
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    /* Homepage ticker */
+    .ticker-track {
+        animation: none !important;
+    }
+
+    /* Homepage hero pulse */
+    .pulse {
+        animation: none !important;
+    }
+
+    .hero-eyebrow-pill .pulse {
+        animation: none !important;
+    }
+
+    /* All Swiper autoplay transitions — SwiperJS respects this
+     natively when you pass { a11y: true }, but belt-and-suspenders: */
+    .swiper-wrapper {
+        transition: none !important;
+    }
+}
+
+
+/* ================================================================
+   CAROUSEL AUTOPLAY FIXES
+   ────────────────────────────────────────────────────────────────
+   Two carousels in assets/js/app.js are missing autoplay.
+   This file (CSS-only) cannot fix JS configs. Add the changes
+   below to assets/js/app.js inside the initSwipers() function.
+   ────────────────────────────────────────────────────────────────
+
+   ── CAROUSEL 1: swiper-topics (currently: freeMode, no autoplay)
+   Replace the existing swiper-topics block with:
+
+   if (document.querySelector('.swiper-topics')) {
+     new Swiper('.swiper-topics', {
+       slidesPerView:  2.2,
+       spaceBetween:   16,
+       loop:           true,
+       grabCursor:     true,
+       autoplay:       { delay: 4000, disableOnInteraction: false },
+       breakpoints: {
+         576:  { slidesPerView: 3 },
+         768:  { slidesPerView: 4 },
+         1024: { slidesPerView: 6 }
+       }
+     });
+   }
+
+   ── CAROUSEL 2: swiper-collections (currently: loop false, no autoplay)
+   Replace the existing swiper-collections block with:
+
+   if (document.querySelector('.swiper-collections')) {
+     new Swiper('.swiper-collections', {
+       slidesPerView:  1.15,
+       spaceBetween:   20,
+       loop:           true,
+       autoplay:       { delay: 5000, disableOnInteraction: false },
+       breakpoints: {
+         576:  { slidesPerView: 1.6 },
+         600:  { slidesPerView: 2.1 },
+         1024: { slidesPerView: 3.2 }
+       }
+     });
+   }
+
+   ── ALREADY WORKING (no changes needed):
+   - swiper-featured   → autoplay: { delay: 5000 } ✓
+   - swiper-testimonials → autoplay: { delay: 6000 } ✓
+
+   ── index.html inline script also initialises swiper-topics with
+   freeMode (intentional for the topic-chip scroller). If you want
+   that one auto-scrolling too, update its inline script to match
+   the config above.
+   ================================================================ */
