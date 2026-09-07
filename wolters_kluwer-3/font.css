@@ -1,0 +1,156 @@
+/* ==========================
+   Arial Family
+   ========================== */
+
+@font-face {
+    font-family: 'Arial';
+    src: url('./font/arial/ARIAL.TTF') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('./font/arial/ARIALBD.TTF') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('./font/arial/ARIALI.TTF') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('./font/arial/ARIALBI.TTF') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* ==========================
+   Arial Narrow
+   ========================== */
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('./font/arial/ARIALN.TTF') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('./font/arial/ARIALNB.TTF') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('./font/arial/ARIALNI.TTF') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('./font/arial/ARIALNBI.TTF') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* ==========================
+   Arial Light
+   ========================== */
+
+@font-face {
+    font-family: 'Arial Light';
+    src: url('./font/arial/ARIALLGT.TTF') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial Light';
+    src: url('./font/arial/ARIALLGTITL.TTF') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* ==========================
+   Arial Black
+   ========================== */
+
+@font-face {
+    font-family: 'Arial Black';
+    src: url('./font/arial/ARIBLK.TTF') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial Black';
+    src: url('./font/arial/ARIALBLACKITALIC.TTF') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* ==========================
+   Arial Medium
+   ========================== */
+
+@font-face {
+    font-family: 'Arial Medium';
+    src: url('./font/arial/ArialMdm.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial Medium';
+    src: url('./font/arial/ArialMdmItl.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* ==========================
+   Arial CE
+   ========================== */
+
+@font-face {
+    font-family: 'Arial CE';
+    src: url('./font/arial/ArialCE.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial CE';
+    src: url('./font/arial/arialceb.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial CE';
+    src: url('./font/arial/ArialCEItalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Arial CE';
+    src: url('./font/arial/ArialCEBoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Arial CE Black';
+    src: url('./font/arial/ArialCEMTBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
